@@ -184,18 +184,20 @@ img {
 .panel-content h2 {
   font-size: clamp(0.95rem, 1.1vw, 1.15rem);
   line-height: 1.2;
-  height: 2.4em;
-  margin-bottom: 8px;
+  height: 3em;
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 8px 0;
 }
 
 .panel-content p {
   font-size: 0.72rem;
   line-height: 1.35;
-  max-width: none;
   width: 92%;
+  max-width: none;
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 .panel:hover .panel-content p {
