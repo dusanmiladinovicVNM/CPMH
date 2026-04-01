@@ -137,6 +137,7 @@ img {
   overflow: hidden;
   transition: flex-basis 0.45s ease, flex-grow 0.45s ease;
   border-right: 1px solid rgba(255,255,255,0.18);
+  --line-color: #ffffff;
 }
 
 .panel:last-child {
@@ -189,6 +190,16 @@ img {
   transition: bottom 0.35s ease, transform 0.35s ease;
 }
 
+.panel-content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(100% + 1.2em);
+  width: 33.33%;
+  height: 2px;
+  background: var(--line-color);
+}
+
 .panel-content p {
   position: absolute;
   left: 0;
@@ -211,6 +222,13 @@ img {
   opacity: 1;
   transform: translateY(0);
 }
+
+.panel-1 { --line-color: #d4af37; }
+.panel-2 { --line-color: #c0392b; }
+.panel-3 { --line-color: #2980b9; }
+.panel-4 { --line-color: #27ae60; }
+.panel-5 { --line-color: #8e44ad; }
+.panel-6 { --line-color: #e67e22; }
 
 .intro {
   min-height: 12.5vw;
