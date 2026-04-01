@@ -47,6 +47,8 @@ img {
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.08em;
+  display: inline-block;
+  color: var(--white);
 }
 
 .top-nav {
@@ -57,6 +59,7 @@ img {
 }
 
 .top-nav a {
+  color: var(--white);
   transition: opacity 0.25s ease;
 }
 
