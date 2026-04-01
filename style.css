@@ -203,7 +203,7 @@ img {
 }
 
 .panel:hover .panel-content h2 {
-  bottom: 90px;
+  bottom: 100px;
 }
 
 .panel:hover .panel-content p {
