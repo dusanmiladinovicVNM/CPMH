@@ -176,33 +176,38 @@ img {
   bottom: 30px;
   z-index: 2;
   color: var(--white);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 .panel-content h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
   font-size: clamp(0.95rem, 1.1vw, 1.15rem);
   line-height: 1.2;
-  height: 3em;
-  display: flex;
-  align-items: flex-end;
-  margin: 0 0 8px 0;
+  transition: bottom 0.35s ease;  
 }
 
 .panel-content p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 92%;
   font-size: 0.72rem;
   line-height: 1.35;
-  width: 92%;
-  max-width: none;
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition: opacity 0.25s ease;
+}
+
+.panel:hover .panel-content h2 {
+  bottom: 33%;
 }
 
 .panel:hover .panel-content p {
   opacity: 1;
-  transform: translateY(0);
+  bottom: calc(33% - 55px);
 }
 
 .intro {
