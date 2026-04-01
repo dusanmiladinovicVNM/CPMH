@@ -186,7 +186,7 @@ img {
   margin: 0;
   font-size: clamp(0.95rem, 1.1vw, 1.15rem);
   line-height: 1.2;
-  transition: bottom 0.35s ease;  
+  transition: bottom 0.35s ease, transform 0.35s ease;
 }
 
 .panel-content p {
@@ -198,16 +198,18 @@ img {
   font-size: 0.72rem;
   line-height: 1.35;
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .panel:hover .panel-content h2 {
-  bottom: 33%;
+  bottom: 90px;
 }
 
 .panel:hover .panel-content p {
+  bottom: 0;
   opacity: 1;
-  bottom: calc(33% - 55px);
+  transform: translateY(0);
 }
 
 .intro {
