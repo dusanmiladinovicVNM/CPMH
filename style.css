@@ -187,6 +187,14 @@ img {
   font-size: 0.98rem;
   line-height: 1.55;
   max-width: 520px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.panel:hover .panel-content p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .intro {
