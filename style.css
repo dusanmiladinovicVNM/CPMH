@@ -182,16 +182,17 @@ img {
 }
 
 .panel-content h2 {
-  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
   line-height: 1.2;
-  min-height: 2.4em;
+  height: 2.4em;
   margin-bottom: 8px;
 }
 
 .panel-content p {
-  font-size: 0.78rem;
-  line-height: 1.4;
-  max-width: 420px;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  max-width: none;
+  width: 92%;
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.4s ease, transform 0.4s ease;
