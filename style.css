@@ -39,7 +39,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 40px 18px 12px;
+  padding: 8px 40px 40px 12px;
   border-bottom: 1px solid var(--line);
 }
 
