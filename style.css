@@ -473,6 +473,12 @@ img {
     justify-self: start;
     text-align: left;
   }
+
+  .footer-center {
+  justify-self: center;
+  text-align: left;
+  }
+  
 }
 
 @media (max-width: 640px) {
