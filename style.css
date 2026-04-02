@@ -109,6 +109,11 @@ img {
   text-align: right;
 }
 
+.footer-center {
+  justify-self: center;
+  text-align: left;
+  width: fit-content;
+}
 .page-hero {
   padding: 70px 40px 40px;
   background: var(--white);
@@ -473,12 +478,6 @@ img {
     justify-self: start;
     text-align: left;
   }
-
-  .footer-center {
-  justify-self: center;
-  text-align: left;
-  }
-  
 }
 
 @media (max-width: 640px) {
