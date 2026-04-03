@@ -64,6 +64,9 @@ img {
 .top-nav a {
   color: var(--white);
   transition: opacity 0.25s ease;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .top-nav a:hover,
