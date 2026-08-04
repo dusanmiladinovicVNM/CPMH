@@ -44,15 +44,15 @@ img {
   border-bottom: 1px solid var(--line);
 }
 
-.logo {
-  display: inline-flex;
-  align-items: center;
+.logo { 
+  display: block;
+  line-height: 0; 
 }
 
-.logo img {
-  height: 80px;
-  width: auto;
-  display: block;
+.logo img { 
+  display: block; 
+  width: 220px; 
+  height: auto; 
 }
 
 .top-nav {
@@ -500,6 +500,9 @@ img {
     padding-left: 0;
     margin-left: 0;
   }
+
+  .logo img { width: 160px; 
+  } 
 }
 
 .company-contacts {
