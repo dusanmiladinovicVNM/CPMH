@@ -148,6 +148,8 @@ img {
   flex: 1 1 16.66%;
   min-width: 0;
   overflow: hidden;
+  /* Dunkler Fallback, solange ein Bild lädt oder wenn es ausfällt. */
+  background: var(--black);
   transition: flex-basis 0.45s ease, flex-grow 0.45s ease;
   border-right: 1px solid rgba(255,255,255,0.18);
   --line-color: var(--accent);
