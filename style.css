@@ -421,10 +421,69 @@ img {
     min-height: auto;
   }
 
+  /* Panels stack und wachsen mit dem Inhalt, statt ihn abzuschneiden. */
   .panel,
   .hero-grid:hover .panel,
   .hero-grid .panel:hover {
-    flex: 1 1 25vh;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: clamp(240px, 60vw, 380px);
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .panel:last-child {
+    border-bottom: none;
+  }
+
+  /* Bild wird zum Hintergrund des Panels, der Zoom-Effekt entfällt. */
+  .panel img,
+  .panel:hover img {
+    position: absolute;
+    inset: 0;
+    transform: none;
+  }
+
+  /* Kräftigerer Verlauf, damit der dauerhaft sichtbare Text lesbar bleibt. */
+  .panel::after {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.6) 45%, rgba(0, 0, 0, 0.35));
+  }
+
+  .panel-content {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: auto;
+    padding: 24px 20px 26px;
+  }
+
+  /* Ohne Hover auf Touch-Geräten: Titel und Text im normalen Fluss. */
+  .panel-content h2,
+  .panel:hover .panel-content h2 {
+    position: static;
+    bottom: auto;
+    width: auto;
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+  }
+
+  .panel-content h2::after {
+    position: static;
+    display: block;
+    width: 56px;
+    margin-top: 12px;
+  }
+
+  .panel-content p,
+  .panel:hover .panel-content p {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    transform: none;
+    font-size: 0.92rem;
+    line-height: 1.55;
   }
 }
 
@@ -478,6 +537,10 @@ img {
     justify-self: start;
     text-align: left;
   }
+
+  .footer-center {
+    justify-self: start;
+  }
 }
 
 @media (max-width: 640px) {
@@ -487,12 +550,15 @@ img {
     padding-right: 18px;
   }
 
-  .panel-content,
   .card-content,
   .contact-content {
     left: 18px;
     right: 18px;
     bottom: 20px;
+  }
+
+  .panel-content {
+    padding: 20px 18px 22px;
   }
 
   .lang-group {
